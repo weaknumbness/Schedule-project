@@ -139,7 +139,7 @@ section .wave span {
   height: 325vh;
   top: -200px;
   left: 50%;
-  transform: translate(-50%, -75%);
+  
   background: #000;
 }
 
@@ -263,4 +263,5 @@ body.loaded .wave {
   body.loaded .wave {
     top: -160px;
   }
+
 }
