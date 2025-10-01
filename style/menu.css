@@ -159,7 +159,7 @@ section .wave span:nth-child(3) {
   }
 
   100% {
-    transform: translate(-50%, -75%) rotate(120deg);
+    transform: translate(-50%, -75%) rotate(360deg);
   }
 }
 
@@ -210,4 +210,5 @@ body.loaded .wave {
     }
 
 }
+
 
