@@ -211,6 +211,13 @@ body.loaded .wave {
 
 }
 
+@media (max-width: 600px) {
+  section .wave span {
+    width: 200vh;
+    height: 200vh;
+    top: 0px;
+  }
+}
 
 
 
