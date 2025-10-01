@@ -124,6 +124,9 @@ section .wave span {
   left: 50%;
   will-change: transform;
   background: #000;
+  transform: translate3d(-50%, -75%, 0) rotate(0deg);
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 
 .content {
@@ -155,11 +158,10 @@ section .wave span:nth-child(3) {
 
 @keyframes animate {
   0% {
-    transform: translate(-50%, -75%) rotate(0deg);
+    transform: translate(-50%, -75%) scale(1) rotate(0deg);
   }
-
   100% {
-    transform: translate(-50%, -75%) rotate(360deg);
+    transform: translate(-50%, -75%) scale(1) rotate(360deg);
   }
 }
 
@@ -218,6 +220,7 @@ body.loaded .wave {
     top: 0px;
   }
 }
+
 
 
 
