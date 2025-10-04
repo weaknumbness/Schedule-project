@@ -133,14 +133,28 @@ section .wave {
 }
 
 section .wave span {
-  content: "";
+  /* content: "";
   position: absolute;
   width: 325vh;
   height: 325vh;
   top: -200px;
   left: 50%;
-  
+  transform: translate(-50%, -75%);
   background: #000;
+  will-change: transform; */
+  content: "";
+  position: absolute;
+  width: 150vw;
+  /* уменьшено */
+  height: 150vw;
+  top: -100px;
+  /* уменьшено */
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+  will-change: transform;
+  border-radius: 45%;
+  animation: animate 5s linear infinite;
 }
 
 .content {
@@ -158,22 +172,37 @@ section .wave span:nth-child(1) {
 }
 
 section .wave span:nth-child(2) {
+  /* border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 10s linear infinite; */
   border-radius: 40%;
   background: rgba(20, 20, 20, 0.5);
   animation: animate 10s linear infinite;
 }
 
 section .wave span:nth-child(3) {
+  /* border-radius: 42.5%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 15s linear infinite; */
   border-radius: 42.5%;
   background: rgba(20, 20, 20, 0.5);
   animation: animate 15s linear infinite;
 }
 
-@keyframes animate {
+/* @keyframes animate {
   0% {
     transform: translate(-50%, -75%) rotate(0deg);
   }
 
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+} */
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
   100% {
     transform: translate(-50%, -75%) rotate(360deg);
   }
@@ -210,13 +239,24 @@ body.loaded .wave {
   transition: top 1s ease;
 }
 
-@keyframes waveOut {
+/* @keyframes waveOut {
   0% {
     transform: translate(-50%, -75%) scale(1) rotate(0deg);
   }
 
   100% {
     transform: translate(-50%, -75%) scale(0) rotate(360deg);
+  }
+} */
+
+@keyframes waveOut {
+  0% {
+    transform: translate(-50%, -75%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -75%) scale(0.8);
+    opacity: 0;
   }
 }
 
@@ -239,12 +279,18 @@ body.loaded .wave {
   }
 }
 
-@media (max-width: 990px) {
+/* @media (max-width: 990px) {
   section .wave span {
     top: -75px;
   }
+} */
 
-
+@media (max-width: 600px) {
+  section .wave span {
+    width: 500vw;
+    height: 500vw;
+    top: 165px;
+  }
 }
 
 @media (min-width: 576px) {
@@ -263,5 +309,4 @@ body.loaded .wave {
   body.loaded .wave {
     top: -160px;
   }
-
 }
