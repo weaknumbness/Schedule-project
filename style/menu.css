@@ -254,8 +254,8 @@ body:not(.loaded) .wave {
 
 @media (max-width: 600px) {
   section .wave span {
-    width: 200vh;
-    height: 200vh;
+    width: 500vw;
+    height: 500vw;
     top: 0px;
   }
 }
@@ -267,5 +267,6 @@ body:not(.loaded) .wave {
     top: -50px;
   }
 } */
+
 
 
