@@ -256,7 +256,7 @@ body.loaded .wave {
   section .wave span {
     width: 550vw;
     height: 550vw;
-    top: 0px;
+    top: -25px;
   }
 }
 
@@ -267,6 +267,7 @@ body.loaded .wave {
     top: -50px;
   }
 } */
+
 
 
 
