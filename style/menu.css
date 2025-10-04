@@ -112,6 +112,7 @@ section .wave {
   height: 100%;
   background: var(--main-color);
   transition: 0.5s;
+  
 }
 
 section .wave span {
@@ -137,6 +138,7 @@ section .wave span {
   will-change: transform;
   border-radius: 45%;
   animation: animate 5s linear infinite;
+  overflow: hidden;
 }
 
 .content {
@@ -265,3 +267,4 @@ body:not(.loaded) .wave {
     top: -50px;
   }
 } */
+
