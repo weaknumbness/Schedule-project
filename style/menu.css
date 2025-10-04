@@ -207,7 +207,7 @@ body.transition-out .wave span {
 }
 
 body:not(.loaded) .wave {
-  top: -100vh;
+  top: -150vh;
 }
 
 .content {
@@ -256,7 +256,7 @@ body.loaded .wave {
   section .wave span {
     width: 550vw;
     height: 550vw;
-    top: -50px;
+    top: -25px;
   }
 }
 
@@ -267,6 +267,7 @@ body.loaded .wave {
     top: -50px;
   }
 } */
+
 
 
 
