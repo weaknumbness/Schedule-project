@@ -207,7 +207,7 @@ body.transition-out .wave span {
 }
 
 body:not(.loaded) .wave {
-  top: -100vw;
+  top: -100vh;
 }
 
 .content {
@@ -221,7 +221,7 @@ body:not(.loaded) .wave {
 
 body.loaded .wave {
   top: 0;
-  transition: top 1.5s ease;
+  transition: top 2s ease;
 }
 
 /* @keyframes waveOut {
@@ -267,6 +267,7 @@ body.loaded .wave {
     top: -50px;
   }
 } */
+
 
 
 
