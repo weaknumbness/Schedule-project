@@ -136,6 +136,8 @@ caption {
   margin: 0 auto 10px auto;
 }
 
+
+
 .tablePadding10 {
   padding-bottom: 10px;
   box-shadow: 0 2px 8px rgba(192, 192, 192, 0.4);
@@ -221,15 +223,28 @@ section .wave {
 }
 
 section .wave span {
-  content: "";
+  /* content: "";
   position: absolute;
   width: 325vh;
   height: 325vh;
   top: -200px;
   left: 50%;
-
+  transform: translate(-50%, -75%);
   background: #000;
-  transition: all 0.5s ease;
+  will-change: transform; */
+  content: "";
+  position: absolute;
+  width: 150vw;
+  /* уменьшено */
+  height: 150vw;
+  top: -100px;
+  /* уменьшено */
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #000;
+  will-change: transform;
+  border-radius: 45%;
+  animation: animate 5s linear infinite;
 }
 
 
@@ -248,12 +263,18 @@ section .wave span:nth-child(1) {
 }
 
 section .wave span:nth-child(2) {
+  /* border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 10s linear infinite; */
   border-radius: 40%;
   background: rgba(20, 20, 20, 0.5);
   animation: animate 10s linear infinite;
 }
 
 section .wave span:nth-child(3) {
+  /* border-radius: 42.5%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 15s linear infinite; */
   border-radius: 42.5%;
   background: rgba(20, 20, 20, 0.5);
   animation: animate 15s linear infinite;
@@ -300,13 +321,24 @@ body.loaded .wave {
   transition: top 1s ease;
 }
 
-@keyframes waveExpand {
+/* @keyframes waveExpand {
   0% {
     transform: translate(-50%, -75%) scale(1) rotate(0deg);
   }
 
   100% {
     transform: translate(-50%, -75%) scale(0) rotate(360deg);
+  }
+} */
+
+@keyframes waveExpand {
+  0% {
+    transform: translate(-50%, -75%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -75%) scale(0.8);
+    opacity: 0;
   }
 }
 
@@ -324,14 +356,21 @@ body.loaded .wave {
   }
 
   .nav {
-    padding: 10px;
-
+    padding: 20px;
   }
 }
 
-@media (max-width: 990px) {
+/* @media (max-width: 990px) {
   section .wave span {
     top: -75px;
+  }
+} */
+
+@media (max-width: 600px) {
+  section .wave span {
+    width: 500vw;
+    height: 500vw;
+    top: 0  px;
   }
 }
 
@@ -357,6 +396,5 @@ body.loaded .wave {
   .tab {
     height: 250px;
   }
-  
 
 }
