@@ -219,10 +219,10 @@ body:not(.loaded) .wave {
   transition: all 2s ease;
 }
 
-/* body.loaded .wave {
+body.loaded .wave {
   top: 0;
   transition: top 1s ease;
-} */
+}
 
 /* @keyframes waveOut {
   0% {
@@ -267,6 +267,7 @@ body:not(.loaded) .wave {
     top: -50px;
   }
 } */
+
 
 
 
