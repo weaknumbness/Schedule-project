@@ -112,7 +112,7 @@ section .wave {
   height: 100%;
   background: var(--main-color);
   transition: 0.5s;
-  
+  overflow: hidden;
 }
 
 section .wave span {
@@ -267,4 +267,5 @@ body:not(.loaded) .wave {
     top: -50px;
   }
 } */
+
 
