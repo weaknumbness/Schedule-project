@@ -217,10 +217,10 @@ body:not(.loaded) .wave {
   transition: all 2s ease;
 }
 
-body.loaded .wave {
+/* body.loaded .wave {
   top: 0;
   transition: top 1s ease;
-}
+} */
 
 /* @keyframes waveOut {
   0% {
@@ -258,5 +258,10 @@ body.loaded .wave {
   }
 }
 
-
-
+/* @media (max-width: 600px) {
+  section .wave span {
+    width: 100vw;
+    height: 100vw;
+    top: -50px;
+  }
+} */
