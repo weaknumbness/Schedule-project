@@ -115,8 +115,9 @@ mainSection.style.setProperty("background", colorForBack);
 window.addEventListener("DOMContentLoaded", () => {
   if (today === 0) {
     isUpperWeek() ? scheduleAppend(PGDown) : scheduleAppend(PGUp);
+  } else {
+    isUpperWeek() ? scheduleAppend(PGUp) : scheduleAppend(PGDown);
   }
-  isUpperWeek() ? scheduleAppend(PGUp) : scheduleAppend(PGDown);
   const localSavedColor = localStorage.getItem("savedColor");
   document.documentElement.style.setProperty("--main-color", localSavedColor);
   if (localSavedColor === null) {
