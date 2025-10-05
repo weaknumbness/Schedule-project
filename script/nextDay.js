@@ -135,13 +135,25 @@ mainSection.style.setProperty("background", colorForBack);
 window.addEventListener("DOMContentLoaded", () => {
   const savedNext = localStorage.getItem("selectedScheduleNext");
   if (savedNext === "PG2next") {
-    isUpperWeek() ? scheduleAppend(PG2Up) : scheduleAppend(PG2Down);
+    if (today - 1 === 0) {
+      isUpperWeek() ? scheduleAppend(PG2Down) : scheduleAppend(PG2Up);
+    } else {
+      isUpperWeek() ? scheduleAppend(PG2Up) : scheduleAppend(PG2Down);
+    }
     pg2BtnElement.classList.add("active");
   } else if (savedNext === "PG1next") {
-    isUpperWeek() ? scheduleAppend(PG1Up) : scheduleAppend(PG1Down);
+    if (today - 1 === 0) {
+      isUpperWeek() ? scheduleAppend(PG1Down) : scheduleAppend(PG1Up);
+    } else {
+      isUpperWeek() ? scheduleAppend(PG1Up) : scheduleAppend(PG1Down);
+    }
     pg1BtnElement.classList.add("active");
   } else if (savedNext === null) {
-    isUpperWeek() ? scheduleAppend(PG2Up) : scheduleAppend(PG2Down);
+    if (today - 1 === 0) {
+      isUpperWeek() ? scheduleAppend(PG2Down) : scheduleAppend(PG2Up);
+    } else {
+      isUpperWeek() ? scheduleAppend(PG2Up) : scheduleAppend(PG2Down);
+    };
     pg2BtnElement.classList.add("active");
   }
   const localSavedColor = localStorage.getItem("savedColor");
