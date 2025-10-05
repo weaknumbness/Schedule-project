@@ -40,7 +40,7 @@ const daysEn = [
 ];
 const now = new Date();
 const today = now.getDay() + 1; //ПРИБАВЛЯЕМ 1 ДЛЯ ПРАВИЛЬНОЙ РАБОТЫ РАСПИСАНИЯ НА ЗАВТРА
-
+console.log(today - 1 === 0);
 function isUpperWeek(referenceDate = new Date("2025-09-01")) {
   const now = new Date();
   const timeDiff = now.getTime() - referenceDate.getTime();
@@ -92,19 +92,21 @@ let scheduleAppend = function (PG) {
   }
 };
 pg2BtnElement.addEventListener("click", () => {
-  if (today === 0) {
+  if (today - 1 === 0) {
     isUpperWeek() ? scheduleAppend(PG2Down) : scheduleAppend(PG2Up);
+  } else {
+    isUpperWeek() ? scheduleAppend(PG2Up) : scheduleAppend(PG2Down);
   }
-  isUpperWeek() ? scheduleAppend(PG2Up) : scheduleAppend(PG2Down);
   pg1BtnElement.classList.remove("active");
   pg2BtnElement.classList.add("active");
   localStorage.setItem("selectedScheduleNext", "PG2next");
 });
 pg1BtnElement.addEventListener("click", () => {
-  if (today === 0) {
+  if (today - 1 === 0) {
     isUpperWeek() ? scheduleAppend(PG1Down) : scheduleAppend(PG1Up);
+  } else {
+    isUpperWeek() ? scheduleAppend(PG1Up) : scheduleAppend(PG1Down);
   }
-  isUpperWeek() ? scheduleAppend(PG1Up) : scheduleAppend(PG1Down);
   pg2BtnElement.classList.remove("active");
   pg1BtnElement.classList.add("active");
   localStorage.setItem("selectedScheduleNext", "PG1next");
