@@ -43,8 +43,14 @@ const today = now.getDay();
 function isUpperWeek(referenceDate = new Date("2025-09-01")) {
   const now = new Date();
   const timeDiff = now.getTime() - referenceDate.getTime();
-  const weekDiff = Math.floor(timeDiff / (7 * 24 * 60 * 60 * 1000));
-  return weekDiff % 2 === 0;
+  //ВОТ ТУТ БЫЛА ОШИБКА
+  if (today === 1 && (now.getTime() < 8 || now.getTime() > 0)) {
+    const weekDiff = Math.round(timeDiff / (7 * 24 * 60 * 60 * 1000));
+    return weekDiff % 2 === 0;
+  } else {
+    const weekDiff = Math.floor(timeDiff / (7 * 24 * 60 * 60 * 1000));
+    return weekDiff % 2 === 0;
+  }
 }
 
 const tableBody = document.querySelector("#table-rasp tbody");
@@ -148,3 +154,4 @@ window.addEventListener("DOMContentLoaded", () => {
   const contentOfPage = document.querySelector(".content");
   contentOfPage.classList.add("loadedCon");
 });
+
