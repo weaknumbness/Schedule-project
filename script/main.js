@@ -167,3 +167,4 @@ window.addEventListener("DOMContentLoaded", () => {
   const contentOfPage = document.querySelector(".content");
   contentOfPage.classList.add("loadedCon");
 });
+
